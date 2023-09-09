@@ -22,10 +22,10 @@ def get_content_drom(scr: str) -> list:
                 for parameter in specifications:
                     parameters += parameter.text + " "
 
-                price = i.find("span", class_="css-46itwz e162wx9x0").find("span").text.strip().replace("\xa0", " ") + " ₽"
+                price = i.find("span", class_="css-46itwz e162wx9x0").find("span").text.strip().replace("\xa0",
+                                                                                                        " ") + "₽"
                 city = i.find("div", class_="css-1x4jcds eotelyr0").find("span").text.strip()
                 car = [href, name, parameters, price, city]
-
 
                 data.append(car)
                 print(car)
@@ -45,13 +45,13 @@ def parser_drom():
         scr = get_html_drom(url)
         print(scr)
         car_blok = get_content_drom(scr)
-        if car_blok == []:
+        if not car_blok:
             break
         else:
             data += car_blok
 
     for i in range(len(data)):
-        print(i+1, data[i])
+        print(i + 1, data[i])
 
 
 parser_drom()
