@@ -11,7 +11,7 @@ def get_html_code(url: str) -> str:
 def get_drom(html_code: str):
     try:
         data = []
-        soup = BeautifulSoup(htmlz_code, "html.parser").find("div", class_="css-1nvf6xk")
+        soup = BeautifulSoup(html_code, "html.parser").find("div", class_="css-1nvf6xk")
         if soup is not None:
             soup = soup.findAll('a', class_='css-xb5nz8 e1huvdhj1')
             for i in soup:
