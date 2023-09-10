@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/css/font-awesome.css') }}" type="text/css">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/css/style.css') }}" type="text/css">
+    <link href="https://fonts.googleeapis.com/css?family=Cuprum" rel="stylesheet">
+    <title>Account</title>
+</head>
+<body>
+
+<header>
+  <nav class="dws-menu">
+    <ul>
+      <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+      <li><a href="#"><i class="fa fa-car"></i>Car Research</a></li>
+      <li><a href="#"><i class="fa fa-github"></i>GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<form action="" method="post">
+    {% if full_name %}
+    <p>Hello, {{full_name}}! </p>
+    {% endif %}
+    {% if login %}
+    <p> Your login : {{login}} </p>
+    {% endif %}
+    {% if password %}
+    <p> Your password : {{password}} </p>
+    {% endif %}
+</form>
+
+</body>
+</html>
