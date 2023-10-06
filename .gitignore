@@ -1,8 +1,11 @@
+.idea/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+expirement.py
+services/settings.py
 # C extensions
 *.so
 
